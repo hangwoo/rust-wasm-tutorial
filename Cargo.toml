@@ -5,6 +5,7 @@ authors = ["bran <bran@watcha.com>"]
 edition = "2018"
 
 [lib]
+# https://doc.rust-lang.org/reference/linkage.html
 crate-type = ["cdylib", "rlib"]
 
 [features]
