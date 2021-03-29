@@ -40,6 +40,7 @@ impl fmt::Display for Universe {
     }
 }
 
+#[wasm_bindgen]
 impl Universe {
     // 연관함수. new
     pub fn new() -> Universe {
@@ -76,7 +77,7 @@ impl Universe {
         let mut count = 0;
         for delta_row in [self.height - 1, 0, 1].iter() {
             for delta_col in [self.width - 1, 0, 1].iter() {
-                if delta_row == 0 && delta_col == 0 {
+                if *delta_row == 0 && *delta_col == 0 {
                     continue;
                 }
 
