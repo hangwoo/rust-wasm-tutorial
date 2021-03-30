@@ -64,9 +64,17 @@ impl Universe {
         }
     }
 
-    // rendering 함수. to_string 은 Display 구현으로 인한것
-    pub fn render(&self) -> String {
-        self.to_string()
+    pub fn width(&self) -> u32 {
+        self.width
+    }
+
+    pub fn height(&self) -> u32 {
+        self.height
+    }
+
+    // cells 의 pointer 를 전달함. js 에서 메모리를 읽을 수 있음.
+    pub fn cells(&self) -> *const Cell {
+        self.cells.as_ptr()
     }
 
     fn get_index(&self, row: u32, column: u32) -> usize {
