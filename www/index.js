@@ -82,4 +82,6 @@ const renderLoop = () => {
   requestAnimationFrame(renderLoop);
 };
 
+console.log(memory);
+
 renderLoop();
